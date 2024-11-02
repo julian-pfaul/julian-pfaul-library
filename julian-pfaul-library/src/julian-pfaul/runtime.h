@@ -11,7 +11,7 @@ namespace julian_pfaul::runtime {
     inline auto s_event_queue = std::queue<event>();
 
     inline bool start();
-    inline bool stop(size attempts_to_try);
+    inline bool stop(size attempts_to_try = 5);
 
     inline void fire_event(event event);
 
