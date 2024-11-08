@@ -24,7 +24,7 @@ namespace julian_pfaul {
     bool operator>=(const bit_address& lhs, const bit_address& rhs) { return lhs.m_address >= rhs.m_address; }
 
     std::ostream& operator<<(std::ostream& os, const bit_address& obj) {
-        return os << std::hex << obj.m_address;
+        return os << std::hex << static_cast<int>(obj.m_address);
     }
 
     // BIT REFERENCE CLASS
@@ -64,6 +64,6 @@ namespace julian_pfaul {
     }
 
     std::ostream& operator<<(std::ostream& os, const byte& obj) {
-        return os << std::hex << obj.m_byte;
+        return os << std::hex << static_cast<int>(obj.m_byte);
     }
 } // julian_pfaul
